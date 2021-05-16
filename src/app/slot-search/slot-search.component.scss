@@ -1,0 +1,18 @@
+:host {
+  margin: 2em auto;
+  width: 50%;
+  display: block;
+}
+
+.mat-card-header {
+  justify-content: center;
+}
+
+.mat-card-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.mat-form-field-wrapper {
+  align-self: flex-end;
+}
