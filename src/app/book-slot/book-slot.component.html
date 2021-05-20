@@ -1,0 +1,17 @@
+<div class="table-container">
+  <mat-table [dataSource]="centers" class="mat-elevation-z8">
+    <ng-container matColumnDef="hospital">
+      <mat-header-cell *matHeaderCellDef>Hospital</mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <div>{{element.name}}</div>
+        <app-capsule [capsuleType]="element.fee_type"></app-capsule>
+      </mat-cell>
+    </ng-container>
+    <ng-container *ngFor="let dateVal of dateValues" matColumnDef="{{dateVal.date}}">
+      <mat-header-cell *matHeaderCellDef>{{dateVal.date}}</mat-header-cell>
+      <mat-cell *matCellDef="let element"><app-slots [center]="element" [forDate]="dateVal.dateKey"></app-slots></mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

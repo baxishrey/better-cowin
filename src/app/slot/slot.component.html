@@ -1,0 +1,16 @@
+<div class="slot-container">
+  <div>
+    <ng-container *ngIf="session.available_capacity > 0; else booked">
+      <app-capsule [capsuleType]="'count'" [count]="session.available_capacity"></app-capsule>
+    </ng-container>
+    <ng-template #booked>
+      <app-capsule [capsuleType]="'booked'"></app-capsule>
+    </ng-template>
+  </div>
+  <div>
+    {{session.vaccine}}
+  </div>
+  <div>
+    {{session.min_age_limit}}+
+  </div>
+</div>
