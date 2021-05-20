@@ -1,0 +1,37 @@
+.paid {
+  color: #fff;
+  font-size: 9px;
+  font-weight: 600;
+  background-color: #2152b3;
+  border-radius: 20px;
+  padding: 2px 5px;
+  margin-left: 3px;
+}
+
+.status {
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0 8px;
+  width: 50px;
+  line-height: 20px;
+  // margin-top: 5px;
+  border-radius: 50px;
+  height: 20px;
+  font-size: 12px;
+}
+
+.count {
+  color: #2e2e2e;
+  background-color: #a9d18e;
+}
+
+.booked {
+  background-color: red;
+  color: #fff;
+}
+
+.na {
+  background-color: #f3f3f3;
+  color: #afafaf;
+  border: 1px solid #afafaf;
+}

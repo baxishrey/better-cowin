@@ -8,9 +8,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SlotSearchComponent } from './slot-search/slot-search.component';
 import { BookSlotComponent } from './book-slot/book-slot.component';
+import { SlotsComponent } from './slots/slots.component';
+import { CapsuleComponent } from './common/capsule/capsule.component';
+import { SlotComponent } from './slot/slot.component';
 
 @NgModule({
-  declarations: [AppComponent, SlotSearchComponent],
+  declarations: [AppComponent, SlotSearchComponent, BookSlotComponent, SlotsComponent, CapsuleComponent, SlotComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

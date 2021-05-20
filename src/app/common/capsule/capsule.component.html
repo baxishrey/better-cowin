@@ -1,0 +1,6 @@
+<div [ngClass]="getCapsuleClass()" [ngSwitch]="capsuleType">
+  <ng-container *ngSwitchCase="'Paid'">Paid</ng-container>
+  <ng-container *ngSwitchCase="'na'">NA</ng-container>
+  <ng-container *ngSwitchCase="'booked'">Booked</ng-container>
+  <ng-container *ngSwitchCase="'count'">{{count}}</ng-container>
+</div>

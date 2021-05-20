@@ -1,0 +1,9 @@
+<ng-container *ngIf="todaySessions.length > 0; else noSession">
+  <ng-container *ngFor="let session of todaySessions">
+    <app-slot [session]="session"></app-slot>
+  </ng-container>
+</ng-container>
+<ng-template #noSession>
+  <app-capsule capsuleType="na"></app-capsule>
+</ng-template>
+

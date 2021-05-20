@@ -7,6 +7,7 @@ import { environment } from '../../environments/environment';
 import { Center, CenterResponse } from '../models/Center';
 import { District, DistrictResponse } from '../models/District';
 import { State, StateResponse } from '../models/State';
+import { DateService } from './date.service';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +19,10 @@ export class CowinService {
     return this.centersFetched$.asObservable();
   }
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(
+    private httpClient: HttpClient,
+    private dateService: DateService
+  ) {}
 
   getAllStates(): Observable<State[]> {
     return this.httpClient
@@ -37,7 +41,7 @@ export class CowinService {
   getSlotsForDistrict(district_id: number): Observable<Center[]> {
     const params = new HttpParams()
       .append('district_id', district_id.toString())
-      .append('date', format(new Date(), 'dd-MM-yyyy'));
+      .append('date', this.dateService.getDateForApi());
 
     return this.httpClient
       .get<CenterResponse>(
