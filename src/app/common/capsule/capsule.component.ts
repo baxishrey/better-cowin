@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CapsuleType } from '../capsule-type';
-import { Required } from '../required.annotation';
+import { CapsuleType } from '../../models/CapsuleType';
 
 @Component({
   selector: 'app-capsule',

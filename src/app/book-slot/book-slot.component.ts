@@ -91,7 +91,7 @@ export class BookSlotComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.centers = this.cowinService.centersFetched;
+    this.centers = this.cowinService.getSlots();
     this.dateValues = this.dateService.getAllDatesOfWeekFromToday();
     this.displayedColumns = [
       ...this.displayedColumns,
