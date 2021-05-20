@@ -10,7 +10,23 @@
 
 .mat-card-content {
   display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  width: 100%;
+}
+
+.search-by-district {
   justify-content: space-evenly;
+}
+
+.search-by-pin {
+  justify-content: center;
+  gap: 2em;
 }
 
 .mat-form-field-wrapper {

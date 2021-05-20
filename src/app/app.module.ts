@@ -13,7 +13,14 @@ import { CapsuleComponent } from './common/capsule/capsule.component';
 import { SlotComponent } from './slot/slot.component';
 
 @NgModule({
-  declarations: [AppComponent, SlotSearchComponent, BookSlotComponent, SlotsComponent, CapsuleComponent, SlotComponent],
+  declarations: [
+    AppComponent,
+    SlotSearchComponent,
+    BookSlotComponent,
+    SlotsComponent,
+    CapsuleComponent,
+    SlotComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
