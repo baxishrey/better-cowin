@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatButtonToggleChange } from '@angular/material/button-toggle';
 import { MatSelectChange } from '@angular/material/select';
-import { Observable } from 'rxjs';
 import { District } from '../models/District';
 import { SearchBy } from '../models/SearchByType';
 import { State } from '../models/State';
@@ -47,18 +46,11 @@ export class SlotSearchComponent implements OnInit {
 
   search() {
     if (this.searchBy == 'district') {
-      // this.cowinService.getSlotsForDistrict(this.selectedDistrict).subscribe({
-      //   next: (centers) => {
-      //   },
-      // });
       this.cowinService.newSearchRequested.next({
         searchBy: 'district',
         parameter: this.selectedDistrict,
       });
     } else {
-      // this.cowinService.getSlotsForPinCode(this.pinCode).subscribe({
-      //   next: (centers) => {},
-      // });
       this.cowinService.newSearchRequested.next({
         searchBy: 'pin',
         parameter: this.pinCode,
