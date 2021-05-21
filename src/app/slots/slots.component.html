@@ -1,9 +1,13 @@
 <ng-container *ngIf="todaySessions.length > 0; else noSession">
-  <ng-container *ngFor="let session of todaySessions">
-    <app-slot [session]="session"></app-slot>
-  </ng-container>
+  <div class="slots-container">
+    <ng-container *ngFor="let session of todaySessions">
+      <app-slot [session]="session"></app-slot>
+    </ng-container>
+  </div>
 </ng-container>
 <ng-template #noSession>
-  <app-capsule capsuleType="na"></app-capsule>
+  <div class="slots-container">
+    <app-capsule capsuleType="na"></app-capsule>
+  </div>
 </ng-template>
 

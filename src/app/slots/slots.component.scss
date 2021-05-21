@@ -1,0 +1,10 @@
+:host {
+  width: 100%;
+}
+
+.slots-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
